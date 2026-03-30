@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifeknot 安傳科技 | 讓愛結伴，平安傳承</title>
+    <style>
+        :root {
+            --primary: #4A6D4A;
+            --primary-soft: #E8F0E8;
+            --accent: #E9967A;
+            --bg: #FDFBFA;
+            --card: #FFFFFF;
+            --text-main: #2D3436;
+            --text-sub: #8E9797;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { 
+            font-family: -apple-system, "SF Pro Display", "PingFang TC", sans-serif; 
+            background: var(--bg); color: var(--text-main); margin: 0; line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 10%; display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; background: rgba(253, 251, 250, 0.8); backdrop-filter: blur(10px); z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: 1px; }
+        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 30px; font-size: 0.9rem; font-weight: 600; }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 10%; text-align: center;
+            background: radial-gradient(circle at top, var(--primary-soft) 0%, transparent 70%);
+        }
+        .hero h1 { font-size: 3rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; color: var(--text-sub); max-width: 600px; margin: 0 auto 40px; }
+        .cta-btn { 
+            background: var(--primary); color: white; padding: 16px 40px; border-radius: 50px; 
+            text-decoration: none; font-weight: 700; box-shadow: 0 10px 20px rgba(74, 109, 74, 0.2);
+            transition: 0.3s;
+        }
+        .cta-btn:hover { transform: translateY(-3px); }
+
+        /* Feature Section */
+        .section { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2rem; color: var(--primary); }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .feature-card {
+            background: var(--card); padding: 40px; border-radius: 30px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02);
+            transition: 0.3s;
+        }
+        .feature-card:hover { transform: translateY(-10px); }
+        .icon { font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* Revenue Model Table */
+        .price-table {
+            width: 100%; border-collapse: separate; border-spacing: 0 15px; margin-top: 30px;
+        }
+        .price-table th { text-align: left; padding: 15px; color: var(--primary); }
+        .price-table td { background: var(--card); padding: 20px; }
+        .price-table tr td:first-child { border-radius: 15px 0 0 15px; font-weight: 700; }
+        .price-table tr td:last-child { border-radius: 0 15px 15px 0; text-align: right; }
+
+        /* Footer */
+        footer { padding: 60px 10%; background: var(--primary-soft); text-align: center; color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav { padding: 20px 5%; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Lifeknot</div>
+    <div class="nav-links">
+        <a href="#vision">核心願景</a>
+        <a href="#features">功能特色</a>
+        <a href="#revenue">營利模式</a>
+        <a href="index.html" style="color: var(--accent);">查看原型 App</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>讓交代不再遺憾</h1>
+    <p>Lifeknot 安傳科技：專為 2026 高齡化社會設計，結合平安偵測與數位遺產託付的雙向守護平台。</p>
+    <a href="#vision" class="cta-btn">了解提案內容</a>
+</section>
+
+<section class="section" id="vision">
+    <div class="section-title">
+        <h2>核心願景：從監控轉向託付</h2>
+        <p style="max-width: 700px; margin: 20px auto; color: var(--text-sub);">
+            我們不只是一個追蹤位置的 APP。我們透過「結伴碼」建立雙向信任，讓長輩在保有隱私的同時，將重要的生活細節與平安叮嚀，精準地傳遞給最關心的人。
+        </p>
+    </div>
+    <div class="grid">
+        <div class="feature-card">
+            <div class="icon">🔒</div>
+            <h3>隱私導向</h3>
+            <p>由受守護者主動發起邀請，並決定誰能看見哪些特定的平安叮嚀。</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🤝</div>
+            <h3>結伴機制</h3>
+            <p>透過結伴代碼雙向驗證，確保守護鏈條真實有效，不再因設定錯誤而失效。</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🌿</div>
+            <h3>質感體驗</h3>
+            <p>摒棄冰冷的監控感，改用輕盈溫潤的 UI 設計，符合長輩的使用心理。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: white;" id="revenue">
+    <div class="section-title">
+        <h2>營利模式與可持續性</h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+        <table class="price-table">
+            <tr>
+                <td>個人基礎版 (Freemium)</td>
+                <td>基本平安偵測、1位守護者</td>
+                <td>免費</td>
+            </tr>
+            <tr>
+                <td>守護家庭版 (Premium)</td>
+                <td>無限守護者、進階語音/圖片叮嚀、雲端加密</td>
+                <td>NT$ 150 / 月</td>
+            </tr>
+            <tr>
+                <td>B2B 企業方案</td>
+                <td>串接長照、保險及律師事務所服務</td>
+                <td>合作洽談</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">Lifeknot</div>
+    <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+        © 2026 Lifeknot 安傳科技. 保留所有權利。
+    </p>
+</footer>
+
+</body>
+</html>
